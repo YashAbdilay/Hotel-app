@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Relevé — reproduction exacte</title>
+	<style>
+		:root { --page-width: 210mm; }
+		html, body { height: 100%; margin: 0; background: #e6e6e6; }
+		.page {
+			width: var(--page-width);
+			margin: 16px auto;
+			background: #fff;
+			box-shadow: 0 0 0 1px rgba(0,0,0,.08), 0 12px 28px rgba(0,0,0,.18);
+		}
+		.page img { width: 100%; height: auto; display: block; }
+		@media (max-width: 840px) {
+			.page { width: 100vw; margin: 0; box-shadow: none; }
+		}
+		@page { size: A4 portrait; margin: 0; }
+		@media print {
+			html, body { background: transparent; }
+			.page { width: 210mm; margin: 0; box-shadow: none; }
+		}
+	</style>
+</head>
+<body>
+	<main class="page" aria-label="Reproduction exacte du document">
+		<img src="releve.jpg" alt="Relevé de cotes — ISC Goma" />
+	</main>
+</body>
+</html>
