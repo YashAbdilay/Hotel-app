@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Onix — Agence de commission d'achat</title>
+	<meta name="description" content="Onix facilite l'achat et l'acheminement de marchandises entre la RDC et l'étranger, en toute sécurité." />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="/styles.css" />
+	<link rel="icon" href="/logo.svg" />
+</head>
+<body>
+	<header class="site-header">
+		<nav class="container nav">
+			<a class="brand" href="/"><img src="/logo.svg" alt="Onix" /> Onix</a>
+			<input id="nav-toggle" type="checkbox" aria-label="Ouvrir le menu" />
+			<label for="nav-toggle" class="burger" aria-hidden="true">☰</label>
+			<ul class="menu">
+				<li><a href="#services">Services</a></li>
+				<li><a href="#process">Processus</a></li>
+				<li><a href="#trust">Confiance</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<section class="hero">
+			<div class="container hero-inner">
+				<div class="hero-copy">
+					<h1>Votre partenaire de confiance pour acheter à l'international</h1>
+					<p>Onix gère vos achats à l'étranger et la logistique d'acheminement jusqu'à votre porte. Transparent, sécurisé, sans stress.</p>
+					<div class="hero-cta">
+						<a class="btn btn-primary" href="#contact">Demander un devis</a>
+						<a class="btn btn-ghost" href="#services">Voir nos services</a>
+					</div>
+				</div>
+				<figure class="hero-media" aria-hidden="true">
+					<img src="/illustration-ship.svg" alt="Logistique internationale" />
+				</figure>
+			</div>
+		</section>
+
+		<section id="services" class="section">
+			<div class="container grid-3">
+				<article class="card">
+					<h3>Commission d'achat</h3>
+					<p>Négociation, paiement sécurisé et contrôle qualité auprès de nos fournisseurs partenaires.</p>
+				</article>
+				<article class="card">
+					<h3>Transport & Douanes</h3>
+					<p>Organisation maritime/aérienne, assurance, dédouanement et suivi temps réel.</p>
+				</article>
+				<article class="card">
+					<h3>Conseil & Sourcing</h3>
+					<p>Identification des fournisseurs, appels d'offres et veille prix pour optimiser vos coûts.</p>
+				</article>
+			</div>
+		</section>
+
+		<section id="process" class="section alt">
+			<div class="container steps">
+				<h2>Comment ça marche</h2>
+				<ol>
+					<li>Brief et devis transparent</li>
+					<li>Validation et paiement sécurisé</li>
+					<li>Achat, contrôle qualité et expédition</li>
+					<li>Suivi, dédouanement et livraison</li>
+				</ol>
+			</div>
+		</section>
+
+		<section id="trust" class="section">
+			<div class="container trust">
+				<h2>Pourquoi nous choisir</h2>
+				<ul class="badges">
+					<li>Contrats clairs</li>
+					<li>Fournisseurs vérifiés</li>
+					<li>Mises à jour proactives</li>
+					<li>Assurance transport</li>
+				</ul>
+			</div>
+		</section>
+
+		<section id="contact" class="section alt">
+			<div class="container contact">
+				<h2>Parlons de votre projet</h2>
+				<form id="contact-form" method="post" action="/api/contact" novalidate>
+					<div class="grid-2">
+						<label>Nom complet
+							<input type="text" name="name" required autocomplete="name" />
+						</label>
+						<label>Email
+							<input type="email" name="email" required autocomplete="email" inputmode="email" />
+						</label>
+					</div>
+					<label>Sujet
+						<input type="text" name="subject" />
+					</label>
+					<label>Message
+						<textarea name="message" rows="6" required></textarea>
+					</label>
+					<input type="text" name="token" autocomplete="off" tabindex="-1" aria-hidden="true" class="hp" />
+					<div class="form-actions">
+						<button class="btn btn-primary" type="submit">Envoyer</button>
+						<p id="form-status" role="status" aria-live="polite"></p>
+					</div>
+				</form>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="container footer-grid">
+			<div>
+				<a class="brand" href="/"><img src="/logo.svg" alt="Onix" /> Onix</a>
+				<p>Agence de commission d'achat entre la RDC et l'étranger.</p>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="#services">Services</a></li>
+					<li><a href="#process">Processus</a></li>
+					<li><a href="#contact">Contact</a></li>
+					<li><a href="/legal.html">Mentions légales</a></li>
+				</ul>
+			</nav>
+		</div>
+		<p class="copyright">© <span id="year"></span> Onix. Tous droits réservés.</p>
+	</footer>
+
+	<script src="/main.js" defer></script>
+</body>
+</html>
