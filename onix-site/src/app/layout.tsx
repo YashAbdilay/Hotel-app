@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,16 +25,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <header className="px-4 py-3 border-b border-black/10 dark:border-white/10 flex items-center gap-3">
-          <img src="/onix-logo.svg" alt="ONIX" width="32" height="32" className="select-none" />
-          <span className="font-semibold">ONIX</span>
-          <a href="/login" className="ml-auto text-sm opacity-80 hover:opacity-100">Connexion</a>
-        </header>
-        {children}
+    <html lang="fr">
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
